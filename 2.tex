@@ -28,9 +28,6 @@ node distance=0pt,
 %01110001110000110010110011100000010101110110000010011000
 
 \foreach \i in {1,0,\ldots,0,1,1,0,1,0,\ldots,1,0,0,1,\ldots,0,0,0,0,1,\ldots,0,1,0}                        
-%\foreach \i in {0,1,1,0,0,0,1,0,0,
-%                0,1,0,1,0,0,0,1,0,
-%                0,0,1,1,0,0,1,0,0}% <-- content of nodes
     \node[X] {\i};
 
 \draw[B=](A-1.north west) -- node[above=3mm,align=center] {Bits 1 to 5 \\ Downlink Format}(A-5.north west);
@@ -39,18 +36,5 @@ node distance=0pt,
 \draw[B](A-13.south west) -- node[below=2mm,align=center] {Bits 33 to 88 \\ Data frame}(A-17.south east);
 \draw[B=](A-18.north west) -- node[above=2mm,align=center] {Bits 89 to 112\\ Parity check}(A-24.north east);
 
-
-%\draw[C] ( A-5.south west) -- node[below=8mm] {} ( A-7.south east);
-%\draw[C=](A-5.north west) -- node[above=8mm] {}(A-8.north west);
-
-
-%\node (B1) [above=of A-1.north west] {};
-%\node (B2) [above=of A-4.north west] {};
-%\draw[B=](B1.north) -- node[above=2mm] {Bits 1 to 5}(B2.north);
-%\draw[B] (A-10.south west) -- node[below=2mm] {Channel 2 Links} (A-18.south east);
-%\draw[B] (A-19.south west) -- node[below=2mm] {Channel 3 Links} (A-27.south east);
-%\node (B1) [inner sep=1pt,above=of A-10.north west] {$\times$};
-%\node (B2) [inner sep=1pt,above=of A-19.north west] {$\times$};
-%\draw[B=](B1.north) -- node[above=2mm] {Crossover Points}(B2.north);
 \end{tikzpicture}
 \end{document}
